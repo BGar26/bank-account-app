@@ -14,10 +14,14 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
+    public void setRate(){
+        rate = getBaseRate() - .25;
+    }
+
     private void setSafetyDepositBox() {
         safetyDepositBoxId = (int) (Math.random() * Math.pow(10, 3));
         safetyDepositBoxKey = (int) (Math.random() * Math.pow(10, 4));
-        System.out.println(safetyDepositBoxId);
+
     }
 
     // List any methods specific to savings account
@@ -31,6 +35,4 @@ public class Savings extends Account {
         );
 
     }
-
-
 }

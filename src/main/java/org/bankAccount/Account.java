@@ -1,6 +1,6 @@
 package org.bankAccount;
 
-public class Account implements IBaseRate {
+public  class Account implements IBaseRate {
 
     // List common properties for savings and checking accounts
     String name;
@@ -21,6 +21,11 @@ public class Account implements IBaseRate {
         index++;
         this.accountNumber = setAccountNumber();
 
+        setRate();
+    }
+
+    public void setRate() {
+
     }
 
     private String setAccountNumber() {
@@ -35,7 +40,8 @@ public class Account implements IBaseRate {
         System.out.println(
                 "NAME: " + name +
                         "\nACCOUNT NUMBER: " + accountNumber +
-                        "\nBALANCE: " + balance
+                        "\nBALANCE: " + balance +
+                        "\nRATE: " + rate + "%"
         );
     }
 }

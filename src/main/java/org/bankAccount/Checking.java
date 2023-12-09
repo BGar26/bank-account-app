@@ -13,12 +13,16 @@ public class Checking extends Account {
         setDebitCard();
     }
 
+    @Override
+    public  void setRate(){
+       rate =  getBaseRate() * .15;
+    }
+
     // List any methods specific to the checking account
     private void setDebitCard() {
         debitCardNumber = (int) (Math.random() * Math.pow(10, 12));
         debitCardPin = (int) (Math.random() * Math.pow(10, 4));
-        System.out.println("CARD:" + this.debitCardNumber);
-        System.out.println("PIN:" + this.debitCardPin);
+
     }
 
     @Override
