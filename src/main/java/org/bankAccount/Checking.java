@@ -3,8 +3,8 @@ package org.bankAccount;
 public class Checking extends Account {
 
     // List properties specific to a Checking account
-    int debitCardNumber;
-    int debitCardPin;
+    private int debitCardNumber;
+    private int debitCardPin;
 
     // Constructor to initialize checking account properties
     public Checking(String name, String sSN, double initDeposit) {
@@ -14,8 +14,8 @@ public class Checking extends Account {
     }
 
     @Override
-    public  void setRate(){
-       rate =  getBaseRate() * .15;
+    public void setRate() {
+        rate = getBaseRate() * .15;
     }
 
     // List any methods specific to the checking account
@@ -31,6 +31,6 @@ public class Checking extends Account {
         System.out.println("Your Checking Account Features" +
                 "\nDebit Card Number: " + debitCardNumber +
                 "\nDebit Card PIN: " + debitCardPin
-                );
+        );
     }
 }

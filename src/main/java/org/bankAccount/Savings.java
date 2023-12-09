@@ -3,8 +3,8 @@ package org.bankAccount;
 public class Savings extends Account {
 
     // List properties specific to the Saving Account
-    int safetyDepositBoxId;
-    int safetyDepositBoxKey;
+    private int safetyDepositBoxId;
+    private int safetyDepositBoxKey;
 
     // Constructor to initialize settings for the Saving properties
 
@@ -14,7 +14,7 @@ public class Savings extends Account {
         setSafetyDepositBox();
     }
 
-    public void setRate(){
+    public void setRate() {
         rate = getBaseRate() - .25;
     }
 
