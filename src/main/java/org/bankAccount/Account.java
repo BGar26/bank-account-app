@@ -7,6 +7,7 @@ public class Account implements IBaseRate {
     String sSN;
     double balance;
     String accountNumber;
+    static int index = 10000;
     double rate;
 
     // Constructor to set base properties and initialize the account
@@ -14,8 +15,27 @@ public class Account implements IBaseRate {
         this.name = name;
         this.sSN = sSN;
         balance = initDeposit;
-        System.out.println("NAME:" + name + " " + "SSN:" + sSN + " " + "BALANCE:$"   + initDeposit);
+
+
+        // Set account number
+        index++;
+        this.accountNumber = setAccountNumber();
 
     }
+
+    private String setAccountNumber() {
+        String lastTwoOfSSN = sSN.substring(sSN.length() - 4);
+        int uniqueID = index;
+        int randomNumber = (int) (Math.random() * Math.pow(10, 3));
+        return lastTwoOfSSN + uniqueID + randomNumber;
+    }
+
     // List common methods
+    public void showInfo() {
+        System.out.println(
+                "NAME: " + name +
+                        "\nACCOUNT NUMBER: " + accountNumber +
+                        "\nBALANCE: " + balance
+        );
+    }
 }
